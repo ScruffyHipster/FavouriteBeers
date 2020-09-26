@@ -1,5 +1,5 @@
 //
-//  ResultsManager.swift
+//  BreweryResultsManager.swift
 //  VATechTest
 //
 //  Created by Thomas Murray on 26/09/2020.
@@ -7,16 +7,8 @@
 
 import Foundation
 
-/// used to provide handler for results callback
-protocol ResultsManager {
-    associatedtype T: Codable
-    var network: NetworkRequestor { get set }
-    var resultsHandler: ((Result<T, Error>) -> Void)? { get set }
-
-}
-
-
-final class BreweryResultsManager<Object: Codable>: ResultsManager {
+/// Handles the requests to the breweryDB api
+final class BreweryResultsManager<Object: Codable>: ResultsManagerProtocol {
 
     var network: NetworkRequestor
     var resultsHandler: ((Result<Object, Error>) -> Void)?

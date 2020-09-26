@@ -24,7 +24,7 @@ final class BeerInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func configureWith(_ result: SearchResults) {
+    func configureWith(_ result: Beer) {
 
     }
 

@@ -33,7 +33,8 @@
 		DBC4368A251F5F4C00B7C82C /* Results++Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43689251F5F4C00B7C82C /* Results++Extentions.swift */; };
 		DBC4368F251F5FA200B7C82C /* NetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */; };
 		DBC43694251F5FE300B7C82C /* BreweryNetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */; };
-		DBC43699251F649A00B7C82C /* ResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43698251F649A00B7C82C /* ResultsManager.swift */; };
+		DBC43699251F649A00B7C82C /* BrewreyResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43698251F649A00B7C82C /* BrewreyResultsManager.swift */; };
+		DBC436B3251F71FA00B7C82C /* ResultsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC436B2251F71FA00B7C82C /* ResultsManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,8 @@
 		DBC43689251F5F4C00B7C82C /* Results++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results++Extentions.swift"; sourceTree = "<group>"; };
 		DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnviroment.swift; sourceTree = "<group>"; };
 		DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryNetworkEnviroment.swift; sourceTree = "<group>"; };
-		DBC43698251F649A00B7C82C /* ResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsManager.swift; sourceTree = "<group>"; };
+		DBC43698251F649A00B7C82C /* BrewreyResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewreyResultsManager.swift; sourceTree = "<group>"; };
+		DBC436B2251F71FA00B7C82C /* ResultsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,8 +201,8 @@
 		DBC435D4251F4DA800B7C82C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DBC436CA251F74F700B7C82C /* DataSource */,
 				DBC435D5251F4DC000B7C82C /* HomeViewController.swift */,
-				DBC4363F251F54E900B7C82C /* TableViewDatasource.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -307,7 +309,8 @@
 		DBC43670251F5D9E00B7C82C /* ResultsManager */ = {
 			isa = PBXGroup;
 			children = (
-				DBC43698251F649A00B7C82C /* ResultsManager.swift */,
+				DBC436C6251F728E00B7C82C /* Protocol */,
+				DBC43698251F649A00B7C82C /* BrewreyResultsManager.swift */,
 			);
 			path = ResultsManager;
 			sourceTree = "<group>";
@@ -319,6 +322,22 @@
 				DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBC436C6251F728E00B7C82C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DBC436B2251F71FA00B7C82C /* ResultsManagerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DBC436CA251F74F700B7C82C /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4363F251F54E900B7C82C /* TableViewDatasource.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,7 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC43664251F59F100B7C82C /* BeerInfoViewController.swift in Sources */,
-				DBC43699251F649A00B7C82C /* ResultsManager.swift in Sources */,
+				DBC43699251F649A00B7C82C /* BrewreyResultsManager.swift in Sources */,
 				DBC43645251F559D00B7C82C /* SearchResults.swift in Sources */,
 				DBC4366A251F5AAD00B7C82C /* BeerInfoView.swift in Sources */,
 				DBC4363B251F548100B7C82C /* HomeView.swift in Sources */,
@@ -471,6 +490,7 @@
 				DBC4364C251F573900B7C82C /* HomeViewTableViewCell.swift in Sources */,
 				DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */,
 				DBC4368F251F5FA200B7C82C /* NetworkEnviroment.swift in Sources */,
+				DBC436B3251F71FA00B7C82C /* ResultsManagerProtocol.swift in Sources */,
 				DBC43674251F5DF900B7C82C /* NetworkRequestor.swift in Sources */,
 				DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */,
 				DBC435D6251F4DC000B7C82C /* HomeViewController.swift in Sources */,

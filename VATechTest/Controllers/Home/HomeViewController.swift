@@ -26,12 +26,15 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUpDataSource()
         setUpHomeView()
+        delegate?.requestData()
     }
 
     // MARK: - Methods
     private func setUpDataSource() {
-        tableViewDatasource = TableViewDataSource(tableView: homeTableView, cellProvider: { tableView, indexPath, prevSearch in
+        tableViewDatasource = TableViewDataSource(tableView: homeTableView, cellProvider: { tableView, indexPath, beer in
             let cell: HomeViewTableViewCell = tableView.dequeueCell(for: indexPath)
+            print(beer.name)
+            cell.configureWith(beer.name)
             return cell
         })
     }
@@ -42,8 +45,8 @@ final class HomeViewController: UIViewController {
         homeTableView.dataSource = tableViewDatasource
     }
 
-    func populateData(_ results: [SearchResults]) {
-        tableViewDatasource?.appendBeers(results)
+    func populateData(_ results: [Beer]) {
+        tableViewDatasource?.setBeers(results)
     }
 
 }

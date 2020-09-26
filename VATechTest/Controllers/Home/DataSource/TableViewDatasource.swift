@@ -11,8 +11,7 @@ enum Section {
     case main
 }
 
-final class TableViewDataSource: UITableViewDiffableDataSource<Section, SearchResults> {
-
+final class TableViewDataSource: UITableViewDiffableDataSource<Section, Beer> {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -32,8 +31,8 @@ final class TableViewDataSource: UITableViewDiffableDataSource<Section, SearchRe
     // MARK: - Methods
     /// Set initial values for the data source
     /// - Parameter movies: an array of movie objects
-    func setBeers(_ searches: [SearchResults]) {
-        var snapShot = NSDiffableDataSourceSnapshot<Section, SearchResults>()
+    func setBeers(_ searches: [Beer]) {
+        var snapShot = NSDiffableDataSourceSnapshot<Section, Beer>()
         snapShot.appendSections([Section.main])
         snapShot.appendItems(searches.map({ $0 }), toSection: .main)
         apply(snapShot, animatingDifferences: true)
@@ -41,7 +40,7 @@ final class TableViewDataSource: UITableViewDiffableDataSource<Section, SearchRe
 
     /// Add additional beers to existing beers array
     /// - Parameter searches: an array of beer objects
-    func appendBeers(_ searches: [SearchResults]) {
+    func appendBeers(_ searches: [Beer]) {
         var snapShot = snapshot()
         guard snapShot.sectionIdentifiers.contains(.main) else {
             print("⚠️ Section doesn't exist!!")
@@ -51,7 +50,7 @@ final class TableViewDataSource: UITableViewDiffableDataSource<Section, SearchRe
         apply(snapShot)
     }
 
-    func beer(at index: Int) -> SearchResults? {
+    func beer(at index: Int) -> Beer? {
         let allMainItems = snapshot().itemIdentifiers(inSection: .main)
         return allMainItems[index]
     }

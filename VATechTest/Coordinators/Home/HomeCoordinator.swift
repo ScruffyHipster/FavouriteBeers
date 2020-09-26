@@ -13,8 +13,8 @@ class HomeCoordinator: Coordinator {
     var children: [Coordinator]?
 
     var navigationController: UINavigationController
-    var resultsManager: BreweryResultsManager<[SearchResults]>?
-    var detailsResultsManager: BreweryResultsManager<SearchResults>?
+    var resultsManager: BreweryResultsManager<SearchResults>?
+    var detailsResultsManager: BreweryResultsManager<Beer>?
 
     lazy var homeController: HomeViewController = {
         var controller = HomeViewController.instantiate()
@@ -30,8 +30,8 @@ class HomeCoordinator: Coordinator {
 
     // MARK: - Init methods
     init(navController: UINavigationController = UINavigationController(),
-         resultsManager: BreweryResultsManager<[SearchResults]> = BreweryResultsManager(),
-         detailsResultsManager: BreweryResultsManager<SearchResults> = BreweryResultsManager()
+         resultsManager: BreweryResultsManager<SearchResults> = BreweryResultsManager(),
+         detailsResultsManager: BreweryResultsManager<Beer> = BreweryResultsManager()
          ) {
         self.navigationController = navController
         self.resultsManager = resultsManager
@@ -44,15 +44,14 @@ class HomeCoordinator: Coordinator {
         setUpHandlers()
         setUpNavControllerApperance()
         initHomeController()
+
     }
 
     private func setUpHandlers() {
         resultsManager?.resultsHandler = {
             switch $0 {
             case .success(let results):
-                print(results)
-                self.homeController.populateData(results)
-                break
+                self.homeController.populateData(results.data)
             case .failure(let error):
                 print(error.localizedDescription)
                 break
@@ -78,14 +77,14 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(homeController, animated: true)
     }
 
-    func startBeerInfoViewController(_ result: SearchResults) {
+    private func startBeerInfoViewController(_ result: Beer) {
         beerInfoViewController.configureWith(result)
         navigationController.pushViewController(beerInfoViewController, animated: true)
     }
 
-    private func setUpNavControllerApperance() {
+    private func setUpNavControllerApperance(_ title: String = "Beers") {
+        homeController.title = title
         navigationController.modalPresentationStyle = .overFullScreen
-        navigationController.navigationBar.isHidden = true
     }
 
 }
@@ -103,6 +102,5 @@ extension HomeCoordinator: BeerInfoViewControllerDelegate {
 extension HomeCoordinator: HomeViewControllerDelegate {
     func requestData() {
         resultsManager?.search(endpoint: .beers)
-
     }
 }

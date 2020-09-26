@@ -9,4 +9,10 @@ import UIKit
 
 class HomeViewTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var title: UILabel!
+
+    func configureWith(_ data: String) {
+        title.text = data
+    }
+
 }

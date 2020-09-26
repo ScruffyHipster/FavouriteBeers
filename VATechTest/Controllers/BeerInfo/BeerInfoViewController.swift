@@ -17,15 +17,18 @@ final class BeerInfoViewController: UIViewController {
     
     // MARK: - Properties
     weak var delegate: BeerInfoViewControllerDelegate?
+    var beer: BeerData?
 
     // MARK: - Init methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureView()
         // Do any additional setup after loading the view.
     }
 
-    func configureWith(_ result: Beer) {
-
+    func configureView() {
+        beerInfoView.beerTitle.text = beer?.name
+        beerInfoView.beerInfo.text = beer?.dataDescription
     }
 
     // MARK: - Methods

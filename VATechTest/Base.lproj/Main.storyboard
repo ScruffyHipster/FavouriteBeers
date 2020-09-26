@@ -103,29 +103,29 @@
         <!--Beer Info View Controller-->
         <scene sceneID="xED-tA-XhV">
             <objects>
-                <viewController id="UPe-zD-5aL" customClass="BeerInfoViewController" customModule="VATechTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BeerInfoViewController" id="UPe-zD-5aL" customClass="BeerInfoViewController" customModule="VATechTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hRc-E2-9Ha" customClass="BeerInfoView" customModule="VATechTest" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="bCn-wo-yQH">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="20" y="94" width="374" height="748"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beer name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="533-WH-gdK">
-                                        <rect key="frame" x="166" y="0.0" width="82" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="109" y="0.0" width="156" height="41"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PPf-cx-CUl">
-                                        <rect key="frame" x="47" y="88.5" width="320" height="320"/>
+                                        <rect key="frame" x="27" y="109" width="320" height="320"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="PPf-cx-CUl" secondAttribute="height" multiplier="1:1" id="6oF-Qu-6zT"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Some text about the beer" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpP-hA-0a0">
-                                        <rect key="frame" x="110.5" y="476.5" width="193" height="291.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="90.5" y="497" width="193" height="251"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -135,10 +135,10 @@
                         <viewLayoutGuide key="safeArea" id="Xx4-5z-eOu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bCn-wo-yQH" firstAttribute="leading" secondItem="Xx4-5z-eOu" secondAttribute="leading" id="Yy3-6D-Dcq"/>
+                            <constraint firstItem="bCn-wo-yQH" firstAttribute="leading" secondItem="Xx4-5z-eOu" secondAttribute="leading" constant="20" id="Yy3-6D-Dcq"/>
                             <constraint firstItem="bCn-wo-yQH" firstAttribute="top" secondItem="Xx4-5z-eOu" secondAttribute="top" constant="50" id="ZSL-1v-Ijp"/>
-                            <constraint firstItem="Xx4-5z-eOu" firstAttribute="trailing" secondItem="bCn-wo-yQH" secondAttribute="trailing" id="kSw-iv-y5g"/>
-                            <constraint firstItem="Xx4-5z-eOu" firstAttribute="bottom" secondItem="bCn-wo-yQH" secondAttribute="bottom" id="t75-MN-tdM"/>
+                            <constraint firstItem="Xx4-5z-eOu" firstAttribute="trailing" secondItem="bCn-wo-yQH" secondAttribute="trailing" constant="20" id="kSw-iv-y5g"/>
+                            <constraint firstItem="Xx4-5z-eOu" firstAttribute="bottom" secondItem="bCn-wo-yQH" secondAttribute="bottom" constant="20" id="t75-MN-tdM"/>
                         </constraints>
                         <connections>
                             <outlet property="beerImage" destination="PPf-cx-CUl" id="etE-ps-1Ki"/>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB94D063251F7E7F00B6FD2C /* BeerSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */; };
 		DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43567251F4A7700B7C82C /* AppDelegate.swift */; };
 		DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43569251F4A7700B7C82C /* SceneDelegate.swift */; };
 		DBC4356F251F4A7700B7C82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC4356D251F4A7700B7C82C /* Main.storyboard */; };
@@ -55,7 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DBC43564251F4A7700B7C82C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = VATechTest.app; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTest.app"; sourceTree = "<absolute>"; };
+		DB94D05F251F781300B6FD2C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VATechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94D060251F781300B6FD2C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchResult.swift; sourceTree = "<group>"; };
 		DBC43567251F4A7700B7C82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBC43569251F4A7700B7C82C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DBC4356E251F4A7700B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,8 +67,6 @@
 		DBC43573251F4A7800B7C82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC43576251F4A7800B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBC43578251F4A7800B7C82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBC4357D251F4A7900B7C82C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestTests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestTests.xctest"; sourceTree = "<absolute>"; };
-		DBC43588251F4A7900B7C82C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestUITests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestUITests.xctest"; sourceTree = "<absolute>"; };
 		DBC435C8251F4CC700B7C82C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DBC435CE251F4D3100B7C82C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		DBC435D5251F4DC000B7C82C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +122,9 @@
 				DBC43566251F4A7700B7C82C /* VATechTest */,
 				DBC43633251F505F00B7C82C /* VATechTestTests */,
 				DBC43632251F505F00B7C82C /* VATechTestUITests */,
+				DB94D05F251F781300B6FD2C /* VATechTest.app */,
+				DB94D060251F781300B6FD2C /* VATechTestTests.xctest */,
+				DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC43644251F559D00B7C82C /* SearchResults.swift */,
+				DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -360,7 +366,7 @@
 				DBC435BD251F4C8200B7C82C /* Alamofire */,
 			);
 			productName = VATechTest;
-			productReference = DBC43564251F4A7700B7C82C /* VATechTest.app */;
+			productReference = DB94D05F251F781300B6FD2C /* VATechTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DBC4357C251F4A7900B7C82C /* VATechTestTests */ = {
@@ -378,7 +384,7 @@
 			);
 			name = VATechTestTests;
 			productName = VATechTestTests;
-			productReference = DBC4357D251F4A7900B7C82C /* VATechTestTests.xctest */;
+			productReference = DB94D060251F781300B6FD2C /* VATechTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		DBC43587251F4A7900B7C82C /* VATechTestUITests */ = {
@@ -396,7 +402,7 @@
 			);
 			name = VATechTestUITests;
 			productName = VATechTestUITests;
-			productReference = DBC43588251F4A7900B7C82C /* VATechTestUITests.xctest */;
+			productReference = DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -499,6 +505,7 @@
 				DBC43682251F5EB400B7C82C /* AFError++Extentions.swift in Sources */,
 				DBC4367D251F5E4500B7C82C /* NetworkRequestorProtocol.swift in Sources */,
 				DBC4361C251F4F5A00B7C82C /* Storyboarded.swift in Sources */,
+				DB94D063251F7E7F00B6FD2C /* BeerSearchResult.swift in Sources */,
 				DBC43622251F4F8300B7C82C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

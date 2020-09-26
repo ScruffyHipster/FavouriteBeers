@@ -24,7 +24,7 @@ struct BreweryNetworkEnviroment: NetworkEnviroment {
     ///   - searchTerm: Allows choice between .id & .search
     /// - Returns: URLRequest
     func createUrl(endpoint: Endpoints) -> String {
-        baseUrlString.appending("\(endpoint)/?key=\(apiKey)")
+        return baseUrlString.appending("\(endpoint.endpoint)/?key=\(apiKey)")
     }
 
 }

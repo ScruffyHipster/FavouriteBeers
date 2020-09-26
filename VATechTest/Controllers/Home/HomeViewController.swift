@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomeViewControllerDelegate: class {
     func requestData()
+    func displayDataFor(_ id: String)
 }
 
 final class HomeViewController: UIViewController {
@@ -58,6 +59,9 @@ extension HomeViewController: Storyboarded {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //do something with the delegate to open the beer info view controller
+        guard let beerId = tableViewDatasource?.beer(at: indexPath.row)?.id else {
+            //TODO: show an error to the user
+            return }
+        delegate?.displayDataFor(beerId)
     }
 }

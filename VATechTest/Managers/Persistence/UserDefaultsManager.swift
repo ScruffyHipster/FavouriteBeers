@@ -46,7 +46,7 @@ final class BeerUserDefaultsManager: UserDefaultsManager<Beer> {
     // MARK: - Methods
 
     /// Will save a beer
-    /// - Parameter term: movie search term
+    /// - Parameter object: beer object
     func save(_ object: Beer) {
         userDefaults.saveItem(object, total: total)
     }

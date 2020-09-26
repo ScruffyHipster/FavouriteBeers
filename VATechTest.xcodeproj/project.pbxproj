@@ -13,7 +13,6 @@
 		DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43567251F4A7700B7C82C /* AppDelegate.swift */; };
 		DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43569251F4A7700B7C82C /* SceneDelegate.swift */; };
 		DBC4356F251F4A7700B7C82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC4356D251F4A7700B7C82C /* Main.storyboard */; };
-		DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC43570251F4A7700B7C82C /* VATechTest.xcdatamodeld */; };
 		DBC43574251F4A7800B7C82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC43573251F4A7800B7C82C /* Assets.xcassets */; };
 		DBC43577251F4A7800B7C82C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC43575251F4A7800B7C82C /* LaunchScreen.storyboard */; };
 		DBC435BE251F4C8200B7C82C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBC435BD251F4C8200B7C82C /* Alamofire */; };
@@ -62,13 +61,12 @@
 		DB72DBCD251F9B910043FDCA /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		DB72DBD2251F9BDA0043FDCA /* UserDefaults++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults++Extentions.swift"; sourceTree = "<group>"; };
 		DB94D05F251F781300B6FD2C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VATechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB94D060251F781300B6FD2C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94D060251F781300B6FD2C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestTests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestTests.xctest"; sourceTree = "<absolute>"; };
+		DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestUITests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestUITests.xctest"; sourceTree = "<absolute>"; };
 		DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchResult.swift; sourceTree = "<group>"; };
 		DBC43567251F4A7700B7C82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBC43569251F4A7700B7C82C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DBC4356E251F4A7700B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBC43571251F4A7700B7C82C /* VATechTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VATechTest.xcdatamodel; sourceTree = "<group>"; };
 		DBC43573251F4A7800B7C82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC43576251F4A7800B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBC43578251F4A7800B7C82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,8 +135,6 @@
 				DBC43633251F505F00B7C82C /* VATechTestTests */,
 				DBC43632251F505F00B7C82C /* VATechTestUITests */,
 				DB94D05F251F781300B6FD2C /* VATechTest.app */,
-				DB94D060251F781300B6FD2C /* VATechTestTests.xctest */,
-				DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,7 +155,6 @@
 				DBC43573251F4A7800B7C82C /* Assets.xcassets */,
 				DBC43575251F4A7800B7C82C /* LaunchScreen.storyboard */,
 				DBC43578251F4A7800B7C82C /* Info.plist */,
-				DBC43570251F4A7700B7C82C /* VATechTest.xcdatamodeld */,
 			);
 			path = VATechTest;
 			sourceTree = "<group>";
@@ -504,7 +499,6 @@
 				DBC435C9251F4CC700B7C82C /* Coordinator.swift in Sources */,
 				DBC4365B251F57DA00B7C82C /* Reusable.swift in Sources */,
 				DBC4364C251F573900B7C82C /* HomeViewTableViewCell.swift in Sources */,
-				DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */,
 				DBC4368F251F5FA200B7C82C /* NetworkEnviroment.swift in Sources */,
 				DB72DBD3251F9BDA0043FDCA /* UserDefaults++Extentions.swift in Sources */,
 				DBC436B3251F71FA00B7C82C /* ResultsManagerProtocol.swift in Sources */,
@@ -889,19 +883,6 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		DBC43570251F4A7700B7C82C /* VATechTest.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DBC43571251F4A7700B7C82C /* VATechTest.xcdatamodel */,
-			);
-			currentVersion = DBC43571251F4A7700B7C82C /* VATechTest.xcdatamodel */;
-			path = VATechTest.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = DBC4355C251F4A7700B7C82C /* Project object */;
 }

@@ -41,6 +41,18 @@ final class HomeCoordinator: Coordinator {
         configureUserDefaults()
     }
 
+    private func initHomeController() {
+        homeController.delegate = self
+        navigationController.pushViewController(homeController, animated: true)
+    }
+
+    private func showBeerInfoViewController(_ result: Beer) {
+        let controller = BeerInfoViewController.instantiate()
+        controller.delegate = self
+        controller.beer = result
+        self.navigationController.pushViewController(controller, animated: true)
+    }
+
     /// Set up handles for api calls
     private func setUpHandlers() {
         resultsManager?.resultsHandler = { [weak self] in
@@ -53,18 +65,6 @@ final class HomeCoordinator: Coordinator {
                 print(error.localizedDescription)
             }
         }
-    }
-
-    private func initHomeController() {
-        homeController.delegate = self
-        navigationController.pushViewController(homeController, animated: true)
-    }
-
-    private func showBeerInfoViewController(_ result: Beer) {
-        let controller = BeerInfoViewController.instantiate()
-        controller.delegate = self
-        controller.beer = result
-        self.navigationController.pushViewController(controller, animated: true)
     }
 
     private func configureUserDefaults() {

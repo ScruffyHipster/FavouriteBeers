@@ -21,10 +21,12 @@ final class BeerInfoViewController: UIViewController {
     // MARK: - Properties
     weak var delegate: BeerInfoViewControllerDelegate?
     var beer: Beer?
+    var favourited: Bool = false
 
     // MARK: - Actions
     @IBAction func didTapFavouriteButton(_ sender: UIButton) {
         guard let beer = beer else { return }
+        toggleFavouriteIcon()
         delegate?.didFavourtieBeer(beer)
     }
 
@@ -41,6 +43,11 @@ final class BeerInfoViewController: UIViewController {
         beerInfoView.beerInfo.text = beer?.datumDescription
         guard let url = URL(string: beer?.labels?.medium ?? "") else { return }
         beerInfoView.beerImage.kf.setImage(with: url)
+    }
+
+    private func toggleFavouriteIcon() {
+        favourited = !favourited
+        beerInfoView.favourtieButton.setImage(UIImage(systemName: favourited ? "heart.fill" : "heart"), for: .normal)
     }
 
 }

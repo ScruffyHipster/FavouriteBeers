@@ -7,14 +7,17 @@
 
 import UIKit
 
-class HomeCoordinator: Coordinator {
+/// Home coordinator which handles the requests from home view controller
+final class HomeCoordinator: Coordinator {
 
     // MARK: - Properties
     var children: [Coordinator]?
 
     var navigationController: UINavigationController
     var resultsManager: BreweryResultsManager<SearchResults>?
-    var detailsResultsManager: BreweryResultsManager<BeerSearchResult>?
+
+    var beers: [Beer] = []
+    var favourtieBeers: [Beer] = []
 
     lazy var homeController: HomeViewController = {
         var controller = HomeViewController.instantiate()
@@ -22,56 +25,32 @@ class HomeCoordinator: Coordinator {
         return controller
     }()
 
-    lazy var beerInfoViewController: BeerInfoViewController = {
-        var controller = BeerInfoViewController.instantiate()
-        controller.delegate = self
-        return controller
-    }()
-
     // MARK: - Init methods
     init(navController: UINavigationController = UINavigationController(),
-         resultsManager: BreweryResultsManager<SearchResults> = BreweryResultsManager(),
-         detailsResultsManager: BreweryResultsManager<BeerSearchResult> = BreweryResultsManager()
+         resultsManager: BreweryResultsManager<SearchResults> = BreweryResultsManager()
          ) {
         self.navigationController = navController
         self.resultsManager = resultsManager
-        self.detailsResultsManager = detailsResultsManager
     }
 
     // MARK: - Methods
-
     func start() {
         setUpHandlers()
-        setUpNavControllerApperance()
         initHomeController()
-
     }
 
+    /// Set up handles for api calls
     private func setUpHandlers() {
-        resultsManager?.resultsHandler = {
+        resultsManager?.resultsHandler = { [weak self] in
+            guard let self = self else { return }
             switch $0 {
             case .success(let results):
-                self.homeController.populateData(results.data)
+                self.beers = results.data
+                self.homeController.populateData(self.beers)
             case .failure(let error):
                 print(error.localizedDescription)
-                break
             }
         }
-
-        detailsResultsManager?.resultsHandler = {
-            switch $0 {
-            case .success(let result):
-                print(result)
-                DispatchQueue.main.async {
-                    self.startBeerInfoViewController(result.data)
-                }
-                break
-            case .failure(let error):
-                print(error.localizedDescription)
-                break
-            }
-        }
-
     }
 
     private func initHomeController() {
@@ -79,14 +58,11 @@ class HomeCoordinator: Coordinator {
         navigationController.pushViewController(homeController, animated: true)
     }
 
-    private func startBeerInfoViewController(_ result: BeerData) {
-        beerInfoViewController.beer = result
-        self.navigationController.pushViewController(self.beerInfoViewController, animated: true)
-    }
-
-    private func setUpNavControllerApperance(_ title: String = "Beers") {
-        homeController.title = title
-        navigationController.modalPresentationStyle = .overFullScreen
+    private func showBeerInfoViewController(_ result: Beer) {
+        let controller = BeerInfoViewController.instantiate()
+        controller.delegate = self
+        controller.beer = result
+        self.navigationController.pushViewController(controller, animated: true)
     }
 
 }
@@ -94,8 +70,20 @@ class HomeCoordinator: Coordinator {
 // MARK: - HomeViewController Delegate
 extension HomeCoordinator: HomeViewControllerDelegate {
 
-    func displayDataFor(_ beerId: String) {
-        detailsResultsManager?.search(endpoint: .beer(beerId))
+    func toggleFavourtieBeers(_ toggle: Bool) {
+        if toggle {
+            homeController.populateData(favourtieBeers)
+        } else {
+            homeController.populateData(beers)
+        }
+    }
+
+    func saveBeer(_ beer: Beer) {
+        favourtieBeers.append(beer)
+    }
+
+    func displayDataFor(_ beer: Beer) {
+        showBeerInfoViewController(beer)
     }
 
     /// Makes the inital data request
@@ -107,8 +95,8 @@ extension HomeCoordinator: HomeViewControllerDelegate {
 
 // MARK: - BeerInfoViewController Delegate
 extension HomeCoordinator: BeerInfoViewControllerDelegate {
-    func doSomething() {
-        print("do something")
+    func didFavourtieBeer(_ beer: Beer) {
+        favourtieBeers.append(beer)
     }
 
 }

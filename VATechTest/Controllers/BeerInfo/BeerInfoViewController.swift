@@ -6,18 +6,27 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol BeerInfoViewControllerDelegate: class {
-    func doSomething()
+    func didFavourtieBeer(_ beer: Beer)
 }
 
+/// Displays the beer related info
 final class BeerInfoViewController: UIViewController {
 
+    // MARK: - Outlets
     @IBOutlet weak var beerInfoView: BeerInfoView!
     
     // MARK: - Properties
     weak var delegate: BeerInfoViewControllerDelegate?
-    var beer: BeerData?
+    var beer: Beer?
+
+    // MARK: - Actions
+    @IBAction func didTapFavouriteButton(_ sender: UIButton) {
+        guard let beer = beer else { return }
+        delegate?.didFavourtieBeer(beer)
+    }
 
     // MARK: - Init methods
     override func viewDidLoad() {
@@ -26,13 +35,13 @@ final class BeerInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // MARK: - Methods
     func configureView() {
         beerInfoView.beerTitle.text = beer?.name
-        beerInfoView.beerInfo.text = beer?.dataDescription
+        beerInfoView.beerInfo.text = beer?.datumDescription
+        guard let url = URL(string: beer?.labels?.medium ?? "") else { return }
+        beerInfoView.beerImage.kf.setImage(with: url)
     }
-
-    // MARK: - Methods
-
 
 }
 

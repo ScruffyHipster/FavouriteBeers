@@ -12,5 +12,4 @@ protocol ResultsManagerProtocol {
     associatedtype T: Codable
     var network: NetworkRequestor { get set }
     var resultsHandler: ((Result<T, Error>) -> Void)? { get set }
-
 }

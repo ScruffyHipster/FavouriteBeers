@@ -7,7 +7,11 @@
 
 import UIKit
 
-class HomeView: UIView {
+protocol HomeViewDelegate: class {
+    func didToggleFavourties(_ toggled: Bool)
+}
+
+final class HomeView: UIView {
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -16,6 +20,11 @@ class HomeView: UIView {
 
     // MARK: - Properties
     weak var homeTableViewDataSource: TableViewDataSource?
+    weak var delegate: HomeViewDelegate?
 
+    // MARK: - Actions
+    @IBAction func didToggleFavourties(_ sender: UISwitch) {
+        delegate?.didToggleFavourties(sender.isOn)
+    }
 
 }

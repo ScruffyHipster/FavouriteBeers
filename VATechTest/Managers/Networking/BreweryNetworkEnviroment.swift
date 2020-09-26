@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Provides a env context for network requests
 struct BreweryNetworkEnviroment: NetworkEnviroment {
 
     var apiKey: String {

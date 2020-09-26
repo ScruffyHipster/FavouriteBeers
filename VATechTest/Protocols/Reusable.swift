@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Provides a default `reuseIdentifier` to the entities that conform to it.
+/// Provides a default `reuseIdentifier` to the objects that conform to it.
 protocol Reusable {
     static var reuseIdentifier: String { get }
 }

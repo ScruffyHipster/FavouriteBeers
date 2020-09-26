@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+/// Provides methods for network request managers
 protocol NetworkRequestorProtocol {
     var session: Session { get set }
     init(session: Session)

@@ -36,6 +36,7 @@
 		DBC43694251F5FE300B7C82C /* BreweryNetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */; };
 		DBC43699251F649A00B7C82C /* BrewreyResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43698251F649A00B7C82C /* BrewreyResultsManager.swift */; };
 		DBC436B3251F71FA00B7C82C /* ResultsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC436B2251F71FA00B7C82C /* ResultsManagerProtocol.swift */; };
+		DBEBE20A251F8696001E0C81 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = DBEBE209251F8696001E0C81 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBEBE20A251F8696001E0C81 /* Kingfisher in Frameworks */,
 				DBC435BE251F4C8200B7C82C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				DBC43662251F59D800B7C82C /* BeerInfo */,
-				DBC4361A251F4F4900B7C82C /* Protocols */,
 				DBC435D4251F4DA800B7C82C /* Home */,
 			);
 			path = Controllers;
@@ -213,14 +214,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		DBC4361A251F4F4900B7C82C /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				DBC4361B251F4F5A00B7C82C /* Storyboarded.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		DBC43620251F4F6E00B7C82C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				DBC4365A251F57DA00B7C82C /* Reusable.swift */,
+				DBC4361B251F4F5A00B7C82C /* Storyboarded.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -364,6 +358,7 @@
 			name = VATechTest;
 			packageProductDependencies = (
 				DBC435BD251F4C8200B7C82C /* Alamofire */,
+				DBEBE209251F8696001E0C81 /* Kingfisher */,
 			);
 			productName = VATechTest;
 			productReference = DB94D05F251F781300B6FD2C /* VATechTest.app */;
@@ -438,6 +433,7 @@
 			mainGroup = DBC4355B251F4A7700B7C82C;
 			packageReferences = (
 				DBC435BC251F4C8200B7C82C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DBEBE208251F8696001E0C81 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = DBC4355B251F4A7700B7C82C;
 			projectDirPath = "";
@@ -855,6 +851,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		DBEBE208251F8696001E0C81 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -862,6 +866,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DBC435BC251F4C8200B7C82C /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		DBEBE209251F8696001E0C81 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBEBE208251F8696001E0C81 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 

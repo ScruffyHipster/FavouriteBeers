@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Handles the requests to the breweryDB api
+/// Handles the requests to the breweryDB api and handler for returned data
 final class BreweryResultsManager<Object: Codable>: ResultsManagerProtocol {
 
     var network: NetworkRequestor

@@ -9,7 +9,9 @@ import UIKit
 
 protocol HomeViewControllerDelegate: class {
     func requestData()
-    func displayDataFor(_ id: String)
+    func displayDataFor(_ beer: Beer)
+    func saveBeer(_ beer: Beer)
+    func toggleFavourtieBeers(_ toggle: Bool)
 }
 
 final class HomeViewController: UIViewController {
@@ -34,14 +36,15 @@ final class HomeViewController: UIViewController {
     private func setUpDataSource() {
         tableViewDatasource = TableViewDataSource(tableView: homeTableView, cellProvider: { tableView, indexPath, beer in
             let cell: HomeViewTableViewCell = tableView.dequeueCell(for: indexPath)
-            print(beer.name)
-            cell.configureWith(beer.name)
+            cell.delegate = self
+            cell.configureWith(beer)
             return cell
         })
     }
 
     private func setUpHomeView() {
         homeView.homeTableViewDataSource = tableViewDatasource
+        homeView.delegate = self
         homeTableView.delegate = self
         homeTableView.dataSource = tableViewDatasource
     }
@@ -57,11 +60,31 @@ extension HomeViewController: Storyboarded {
     static var storyboardId: StoryboardIdentifiers { .main }
 }
 
+// MARK: - table view delegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let beerId = tableViewDatasource?.beer(at: indexPath.row)?.id else {
+        guard let beer = tableViewDatasource?.beer(at: indexPath.row) else {
             //TODO: show an error to the user
-            return }
-        delegate?.displayDataFor(beerId)
+            return
+        }
+        delegate?.displayDataFor(beer)
+    }
+}
+
+// MARK: - home view delegate
+extension HomeViewController: HomeViewDelegate {
+    func didToggleFavourties(_ toggled: Bool) {
+        delegate?.toggleFavourtieBeers(toggled)
+    }
+}
+
+// MARK: - table view cell delegate
+extension HomeViewController: TableViewCellDelegate {
+    func didFavourtieBeer(_ beer: Beer?) {
+        guard let beer = beer else {
+            print("🍺 not saved")
+            return
+        }
+        delegate?.saveBeer(beer)
     }
 }

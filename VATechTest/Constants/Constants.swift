@@ -7,15 +7,14 @@
 
 import UIKit
 
+///File for storing constants through out application
 struct Constants {
-
     // MARK: - Static Strings
     static let apiKey = "API_KEY"
     static let baseURL = "BASE_URL"
 
 }
 
-// MARK: - Storyboard identifiers
 enum StoryboardIdentifiers: String {
     case main = "Main"
 
@@ -24,7 +23,6 @@ enum StoryboardIdentifiers: String {
     static func access(storyboard: Self) -> UIStoryboard {
         UIStoryboard(name: storyboard.rawValue, bundle: nil)
     }
-
 }
 
 enum Endpoints {

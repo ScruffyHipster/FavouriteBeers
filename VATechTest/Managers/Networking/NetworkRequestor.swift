@@ -35,7 +35,7 @@ final class NetworkRequestor: NetworkRequestorProtocol  {
     
 }
 
-/// Enviroment used for making specific movie requests
+/// Enviroment used for making specific breweryDB requests
 extension NetworkRequestor {
     /// Fetches all the beers from API
     /// - Parameters:

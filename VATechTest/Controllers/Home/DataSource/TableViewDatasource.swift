@@ -30,7 +30,7 @@ final class TableViewDataSource: UITableViewDiffableDataSource<Section, Beer> {
 
     // MARK: - Methods
     /// Set initial values for the data source
-    /// - Parameter movies: an array of movie objects
+    /// - Parameter searches: an array of beer objects
     func setBeers(_ searches: [Beer]) {
         var snapShot = NSDiffableDataSourceSnapshot<Section, Beer>()
         snapShot.appendSections([Section.main])

@@ -13,6 +13,17 @@ struct Constants {
     static let apiKey = "API_KEY"
     static let baseURL = "BASE_URL"
 
+    enum UserDefaultsIdentifiers {
+        case favouriteBeers
+
+        var id: String {
+            switch self {
+            case .favouriteBeers:
+                return "FavouriteBeers"
+            }
+        }
+    }
+
 }
 
 enum StoryboardIdentifiers: String {

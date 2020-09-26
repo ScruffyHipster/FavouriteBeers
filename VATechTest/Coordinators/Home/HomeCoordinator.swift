@@ -15,6 +15,7 @@ final class HomeCoordinator: Coordinator {
 
     var navigationController: UINavigationController
     var resultsManager: BreweryResultsManager<SearchResults>?
+    var userDefaults: BeerUserDefaultsManager?
 
     var beers: [Beer] = []
     var favourtieBeers: [Beer] = []
@@ -37,6 +38,7 @@ final class HomeCoordinator: Coordinator {
     func start() {
         setUpHandlers()
         initHomeController()
+        configureUserDefaults()
     }
 
     /// Set up handles for api calls
@@ -65,6 +67,20 @@ final class HomeCoordinator: Coordinator {
         self.navigationController.pushViewController(controller, animated: true)
     }
 
+    private func configureUserDefaults() {
+        userDefaults = BeerUserDefaultsManager(userDefaults: .standard, closure: { [weak self]  (favouriteBeers, error) in
+            guard let self = self else { return }
+            if let beers = favouriteBeers {
+                self.favourtieBeers.removeAll()
+                self.favourtieBeers.append(contentsOf: beers)
+            }
+            if let error = error {
+                print("Error occured \(error)")
+            }
+        })
+        userDefaults?.retriveObjectsFor(key: Constants.UserDefaultsIdentifiers.favouriteBeers.id)
+    }
+
 }
 
 // MARK: - HomeViewController Delegate
@@ -79,7 +95,8 @@ extension HomeCoordinator: HomeViewControllerDelegate {
     }
 
     func saveBeer(_ beer: Beer) {
-        favourtieBeers.append(beer)
+        userDefaults?.save(beer)
+        userDefaults?.retriveObjectsFor(key: Constants.UserDefaultsIdentifiers.favouriteBeers.id)
     }
 
     func displayDataFor(_ beer: Beer) {
@@ -96,7 +113,7 @@ extension HomeCoordinator: HomeViewControllerDelegate {
 // MARK: - BeerInfoViewController Delegate
 extension HomeCoordinator: BeerInfoViewControllerDelegate {
     func didFavourtieBeer(_ beer: Beer) {
-        favourtieBeers.append(beer)
+        saveBeer(beer)
     }
 
 }

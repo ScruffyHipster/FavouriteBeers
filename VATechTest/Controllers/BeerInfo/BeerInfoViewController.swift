@@ -24,11 +24,15 @@ final class BeerInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    func configureWith(_ result: SearchResults) {
+
+    }
+
     // MARK: - Methods
 
 
 }
 
 extension BeerInfoViewController: Storyboarded {
-    static var storyboardId: StoryboardIdentifiers { .beerInfo }
+    static var storyboardId: StoryboardIdentifiers { .main }
 }

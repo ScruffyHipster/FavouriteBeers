@@ -27,6 +27,13 @@
 		DBC4365B251F57DA00B7C82C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4365A251F57DA00B7C82C /* Reusable.swift */; };
 		DBC43664251F59F100B7C82C /* BeerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43663251F59F100B7C82C /* BeerInfoViewController.swift */; };
 		DBC4366A251F5AAD00B7C82C /* BeerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */; };
+		DBC43674251F5DF900B7C82C /* NetworkRequestor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43673251F5DF900B7C82C /* NetworkRequestor.swift */; };
+		DBC4367D251F5E4500B7C82C /* NetworkRequestorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4367C251F5E4500B7C82C /* NetworkRequestorProtocol.swift */; };
+		DBC43682251F5EB400B7C82C /* AFError++Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43681251F5EB400B7C82C /* AFError++Extentions.swift */; };
+		DBC4368A251F5F4C00B7C82C /* Results++Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43689251F5F4C00B7C82C /* Results++Extentions.swift */; };
+		DBC4368F251F5FA200B7C82C /* NetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */; };
+		DBC43694251F5FE300B7C82C /* BreweryNetworkEnviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */; };
+		DBC43699251F649A00B7C82C /* ResultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43698251F649A00B7C82C /* ResultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +77,13 @@
 		DBC4365A251F57DA00B7C82C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DBC43663251F59F100B7C82C /* BeerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoViewController.swift; sourceTree = "<group>"; };
 		DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoView.swift; sourceTree = "<group>"; };
+		DBC43673251F5DF900B7C82C /* NetworkRequestor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestor.swift; sourceTree = "<group>"; };
+		DBC4367C251F5E4500B7C82C /* NetworkRequestorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestorProtocol.swift; sourceTree = "<group>"; };
+		DBC43681251F5EB400B7C82C /* AFError++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError++Extentions.swift"; sourceTree = "<group>"; };
+		DBC43689251F5F4C00B7C82C /* Results++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results++Extentions.swift"; sourceTree = "<group>"; };
+		DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnviroment.swift; sourceTree = "<group>"; };
+		DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryNetworkEnviroment.swift; sourceTree = "<group>"; };
+		DBC43698251F649A00B7C82C /* ResultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +124,7 @@
 		DBC43566251F4A7700B7C82C /* VATechTest */ = {
 			isa = PBXGroup;
 			children = (
+				DBC4366E251F5D7B00B7C82C /* Managers */,
 				DBC43659251F57CF00B7C82C /* Protocols */,
 				DBC43653251F575A00B7C82C /* Extentions */,
 				DBC43620251F4F6E00B7C82C /* Constants */,
@@ -240,6 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				DBC43654251F576B00B7C82C /* UITableView++Extentions.swift */,
+				DBC43681251F5EB400B7C82C /* AFError++Extentions.swift */,
+				DBC43689251F5F4C00B7C82C /* Results++Extentions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -266,6 +283,42 @@
 				DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */,
 			);
 			path = BeerInfo;
+			sourceTree = "<group>";
+		};
+		DBC4366E251F5D7B00B7C82C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4366F251F5D9200B7C82C /* Networking */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DBC4366F251F5D9200B7C82C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4367B251F5E3500B7C82C /* Protocols */,
+				DBC43673251F5DF900B7C82C /* NetworkRequestor.swift */,
+				DBC43670251F5D9E00B7C82C /* ResultsManager */,
+				DBC43693251F5FE300B7C82C /* BreweryNetworkEnviroment.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		DBC43670251F5D9E00B7C82C /* ResultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43698251F649A00B7C82C /* ResultsManager.swift */,
+			);
+			path = ResultsManager;
+			sourceTree = "<group>";
+		};
+		DBC4367B251F5E3500B7C82C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4367C251F5E4500B7C82C /* NetworkRequestorProtocol.swift */,
+				DBC4368E251F5FA200B7C82C /* NetworkEnviroment.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,19 +458,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC43664251F59F100B7C82C /* BeerInfoViewController.swift in Sources */,
+				DBC43699251F649A00B7C82C /* ResultsManager.swift in Sources */,
 				DBC43645251F559D00B7C82C /* SearchResults.swift in Sources */,
 				DBC4366A251F5AAD00B7C82C /* BeerInfoView.swift in Sources */,
 				DBC4363B251F548100B7C82C /* HomeView.swift in Sources */,
 				DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */,
+				DBC4368A251F5F4C00B7C82C /* Results++Extentions.swift in Sources */,
 				DBC43640251F54E900B7C82C /* TableViewDatasource.swift in Sources */,
 				DBC43655251F576B00B7C82C /* UITableView++Extentions.swift in Sources */,
 				DBC435C9251F4CC700B7C82C /* Coordinator.swift in Sources */,
 				DBC4365B251F57DA00B7C82C /* Reusable.swift in Sources */,
 				DBC4364C251F573900B7C82C /* HomeViewTableViewCell.swift in Sources */,
 				DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */,
+				DBC4368F251F5FA200B7C82C /* NetworkEnviroment.swift in Sources */,
+				DBC43674251F5DF900B7C82C /* NetworkRequestor.swift in Sources */,
 				DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */,
 				DBC435D6251F4DC000B7C82C /* HomeViewController.swift in Sources */,
+				DBC43694251F5FE300B7C82C /* BreweryNetworkEnviroment.swift in Sources */,
 				DBC435CF251F4D3100B7C82C /* HomeCoordinator.swift in Sources */,
+				DBC43682251F5EB400B7C82C /* AFError++Extentions.swift in Sources */,
+				DBC4367D251F5E4500B7C82C /* NetworkRequestorProtocol.swift in Sources */,
 				DBC4361C251F4F5A00B7C82C /* Storyboarded.swift in Sources */,
 				DBC43622251F4F8300B7C82C /* Constants.swift in Sources */,
 			);
@@ -476,6 +536,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_KEY = 1f689a1fe3ad74870b1ebf806136ee3d;
+				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -537,6 +599,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_KEY = 1f689a1fe3ad74870b1ebf806136ee3d;
+				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

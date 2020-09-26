@@ -13,6 +13,8 @@ class HomeCoordinator: Coordinator {
     var children: [Coordinator]?
 
     var navigationController: UINavigationController
+    var resultsManager: BreweryResultsManager<[SearchResults]>?
+    var detailsResultsManager: BreweryResultsManager<SearchResults>?
 
     lazy var homeController: HomeViewController = {
         var controller = HomeViewController.instantiate()
@@ -20,27 +22,65 @@ class HomeCoordinator: Coordinator {
         return controller
     }()
 
-    lazy var beerInfoViewContrller: BeerInfoViewController = {
+    lazy var beerInfoViewController: BeerInfoViewController = {
         var controller = BeerInfoViewController.instantiate()
         controller.delegate = self
         return controller
     }()
 
     // MARK: - Init methods
-    init(navController: UINavigationController = UINavigationController()) {
+    init(navController: UINavigationController = UINavigationController(),
+         resultsManager: BreweryResultsManager<[SearchResults]> = BreweryResultsManager(),
+         detailsResultsManager: BreweryResultsManager<SearchResults> = BreweryResultsManager()
+         ) {
         self.navigationController = navController
+        self.resultsManager = resultsManager
+        self.detailsResultsManager = detailsResultsManager
     }
 
     // MARK: - Methods
 
     func start() {
+        setUpHandlers()
+        setUpNavControllerApperance()
         initHomeController()
     }
 
+    private func setUpHandlers() {
+        resultsManager?.resultsHandler = {
+            switch $0 {
+            case .success(let results):
+                print(results)
+                self.homeController.populateData(results)
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
+                break
+            }
+        }
+
+        detailsResultsManager?.resultsHandler = {
+            switch $0 {
+            case .success(let result):
+                print(result)
+                self.startBeerInfoViewController(result)
+                break
+            case .failure(let error):
+                print(error.localizedDescription)
+                break
+            }
+        }
+
+    }
+
     private func initHomeController() {
-        setUpNavControllerApperance()
         homeController.delegate = self
         navigationController.pushViewController(homeController, animated: true)
+    }
+
+    func startBeerInfoViewController(_ result: SearchResults) {
+        beerInfoViewController.configureWith(result)
+        navigationController.pushViewController(beerInfoViewController, animated: true)
     }
 
     private func setUpNavControllerApperance() {
@@ -62,6 +102,7 @@ extension HomeCoordinator: BeerInfoViewControllerDelegate {
 // MARK: - HomeViewController Delegate
 extension HomeCoordinator: HomeViewControllerDelegate {
     func requestData() {
-        print("Doing something")
+        resultsManager?.search(endpoint: .beers)
+
     }
 }

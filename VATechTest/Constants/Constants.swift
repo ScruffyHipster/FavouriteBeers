@@ -7,10 +7,17 @@
 
 import UIKit
 
+struct Constants {
+
+    // MARK: - Static Strings
+    static let apiKey = "API_KEY"
+    static let baseURL = "BASE_URL"
+
+}
+
 // MARK: - Storyboard identifiers
 enum StoryboardIdentifiers: String {
-    case home = "HomeViewController"
-    case beerInfo = "BeerInfoViewController"
+    case main = "Main"
 
     var identifier: String { rawValue }
 
@@ -18,4 +25,18 @@ enum StoryboardIdentifiers: String {
         UIStoryboard(name: storyboard.rawValue, bundle: nil)
     }
 
+}
+
+enum Endpoints {
+    case beers
+    case beer(String)
+
+    var endpoint: String {
+        switch self {
+        case .beers:
+            return "beers"
+        case .beer(let id):
+            return "beer/\(id)"
+        }
+    }
 }

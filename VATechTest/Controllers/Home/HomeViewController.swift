@@ -42,11 +42,15 @@ final class HomeViewController: UIViewController {
         homeTableView.dataSource = tableViewDatasource
     }
 
+    func populateData(_ results: [SearchResults]) {
+        tableViewDatasource?.appendBeers(results)
+    }
+
 }
 
 // MARK: - Storyboarded delegate
 extension HomeViewController: Storyboarded {
-    static var storyboardId: StoryboardIdentifiers { .home }
+    static var storyboardId: StoryboardIdentifiers { .main }
 }
 
 extension HomeViewController: UITableViewDelegate {

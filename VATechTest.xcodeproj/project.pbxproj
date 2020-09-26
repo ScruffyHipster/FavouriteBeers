@@ -3,19 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43567251F4A7700B7C82C /* AppDelegate.swift */; };
 		DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43569251F4A7700B7C82C /* SceneDelegate.swift */; };
-		DBC4356C251F4A7700B7C82C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4356B251F4A7700B7C82C /* ViewController.swift */; };
 		DBC4356F251F4A7700B7C82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC4356D251F4A7700B7C82C /* Main.storyboard */; };
 		DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DBC43570251F4A7700B7C82C /* VATechTest.xcdatamodeld */; };
 		DBC43574251F4A7800B7C82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC43573251F4A7800B7C82C /* Assets.xcassets */; };
 		DBC43577251F4A7800B7C82C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC43575251F4A7800B7C82C /* LaunchScreen.storyboard */; };
-		DBC43582251F4A7900B7C82C /* VATechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43581251F4A7900B7C82C /* VATechTestTests.swift */; };
-		DBC4358D251F4A7900B7C82C /* VATechTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4358C251F4A7900B7C82C /* VATechTestUITests.swift */; };
+		DBC435BE251F4C8200B7C82C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DBC435BD251F4C8200B7C82C /* Alamofire */; };
+		DBC435C9251F4CC700B7C82C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC435C8251F4CC700B7C82C /* Coordinator.swift */; };
+		DBC435CF251F4D3100B7C82C /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC435CE251F4D3100B7C82C /* HomeCoordinator.swift */; };
+		DBC435D6251F4DC000B7C82C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC435D5251F4DC000B7C82C /* HomeViewController.swift */; };
+		DBC4361C251F4F5A00B7C82C /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4361B251F4F5A00B7C82C /* Storyboarded.swift */; };
+		DBC43622251F4F8300B7C82C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43621251F4F8300B7C82C /* Constants.swift */; };
+		DBC4363B251F548100B7C82C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4363A251F548100B7C82C /* HomeView.swift */; };
+		DBC43640251F54E900B7C82C /* TableViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4363F251F54E900B7C82C /* TableViewDatasource.swift */; };
+		DBC43645251F559D00B7C82C /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43644251F559D00B7C82C /* SearchResults.swift */; };
+		DBC4364C251F573900B7C82C /* HomeViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4364B251F573900B7C82C /* HomeViewTableViewCell.swift */; };
+		DBC43655251F576B00B7C82C /* UITableView++Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43654251F576B00B7C82C /* UITableView++Extentions.swift */; };
+		DBC4365B251F57DA00B7C82C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC4365A251F57DA00B7C82C /* Reusable.swift */; };
+		DBC43664251F59F100B7C82C /* BeerInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43663251F59F100B7C82C /* BeerInfoViewController.swift */; };
+		DBC4366A251F5AAD00B7C82C /* BeerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +47,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DBC43564251F4A7700B7C82C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VATechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC43564251F4A7700B7C82C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = VATechTest.app; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTest.app"; sourceTree = "<absolute>"; };
 		DBC43567251F4A7700B7C82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBC43569251F4A7700B7C82C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DBC4356B251F4A7700B7C82C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBC4356E251F4A7700B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBC43571251F4A7700B7C82C /* VATechTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VATechTest.xcdatamodel; sourceTree = "<group>"; };
 		DBC43573251F4A7800B7C82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBC43576251F4A7800B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBC43578251F4A7800B7C82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBC4357D251F4A7900B7C82C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBC43581251F4A7900B7C82C /* VATechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VATechTestTests.swift; sourceTree = "<group>"; };
-		DBC43583251F4A7900B7C82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBC43588251F4A7900B7C82C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VATechTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBC4358C251F4A7900B7C82C /* VATechTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VATechTestUITests.swift; sourceTree = "<group>"; };
-		DBC4358E251F4A7900B7C82C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC4357D251F4A7900B7C82C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestTests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestTests.xctest"; sourceTree = "<absolute>"; };
+		DBC43588251F4A7900B7C82C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestUITests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestUITests.xctest"; sourceTree = "<absolute>"; };
+		DBC435C8251F4CC700B7C82C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DBC435CE251F4D3100B7C82C /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		DBC435D5251F4DC000B7C82C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DBC4361B251F4F5A00B7C82C /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		DBC43621251F4F8300B7C82C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DBC4363A251F548100B7C82C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DBC4363F251F54E900B7C82C /* TableViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDatasource.swift; sourceTree = "<group>"; };
+		DBC43644251F559D00B7C82C /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		DBC4364B251F573900B7C82C /* HomeViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTableViewCell.swift; sourceTree = "<group>"; };
+		DBC43654251F576B00B7C82C /* UITableView++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView++Extentions.swift"; sourceTree = "<group>"; };
+		DBC4365A251F57DA00B7C82C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		DBC43663251F59F100B7C82C /* BeerInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoViewController.swift; sourceTree = "<group>"; };
+		DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC435BE251F4C8200B7C82C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,28 +102,23 @@
 			isa = PBXGroup;
 			children = (
 				DBC43566251F4A7700B7C82C /* VATechTest */,
-				DBC43580251F4A7900B7C82C /* VATechTestTests */,
-				DBC4358B251F4A7900B7C82C /* VATechTestUITests */,
-				DBC43565251F4A7700B7C82C /* Products */,
+				DBC43633251F505F00B7C82C /* VATechTestTests */,
+				DBC43632251F505F00B7C82C /* VATechTestUITests */,
 			);
-			sourceTree = "<group>";
-		};
-		DBC43565251F4A7700B7C82C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DBC43564251F4A7700B7C82C /* VATechTest.app */,
-				DBC4357D251F4A7900B7C82C /* VATechTestTests.xctest */,
-				DBC43588251F4A7900B7C82C /* VATechTestUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		DBC43566251F4A7700B7C82C /* VATechTest */ = {
 			isa = PBXGroup;
 			children = (
+				DBC43659251F57CF00B7C82C /* Protocols */,
+				DBC43653251F575A00B7C82C /* Extentions */,
+				DBC43620251F4F6E00B7C82C /* Constants */,
+				DBC435A7251F4ADB00B7C82C /* Coordinators */,
+				DBC435A6251F4AD700B7C82C /* Views */,
+				DBC435A5251F4AD300B7C82C /* Models */,
+				DBC435A4251F4ACD00B7C82C /* Controllers */,
 				DBC43567251F4A7700B7C82C /* AppDelegate.swift */,
 				DBC43569251F4A7700B7C82C /* SceneDelegate.swift */,
-				DBC4356B251F4A7700B7C82C /* ViewController.swift */,
 				DBC4356D251F4A7700B7C82C /* Main.storyboard */,
 				DBC43573251F4A7800B7C82C /* Assets.xcassets */,
 				DBC43575251F4A7800B7C82C /* LaunchScreen.storyboard */,
@@ -113,22 +128,144 @@
 			path = VATechTest;
 			sourceTree = "<group>";
 		};
-		DBC43580251F4A7900B7C82C /* VATechTestTests */ = {
+		DBC435A4251F4ACD00B7C82C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBC43581251F4A7900B7C82C /* VATechTestTests.swift */,
-				DBC43583251F4A7900B7C82C /* Info.plist */,
+				DBC43662251F59D800B7C82C /* BeerInfo */,
+				DBC4361A251F4F4900B7C82C /* Protocols */,
+				DBC435D4251F4DA800B7C82C /* Home */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DBC435A5251F4AD300B7C82C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43644251F559D00B7C82C /* SearchResults.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBC435A6251F4AD700B7C82C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43668251F59F900B7C82C /* BeerInfo */,
+				DBC4364A251F571D00B7C82C /* TableViewCells */,
+				DBC43649251F571800B7C82C /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBC435A7251F4ADB00B7C82C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DBC435CD251F4D2200B7C82C /* Home */,
+				DBC435A9251F4AEA00B7C82C /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DBC435A9251F4AEA00B7C82C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBC435C8251F4CC700B7C82C /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBC435CD251F4D2200B7C82C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DBC435CE251F4D3100B7C82C /* HomeCoordinator.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DBC435D4251F4DA800B7C82C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DBC435D5251F4DC000B7C82C /* HomeViewController.swift */,
+				DBC4363F251F54E900B7C82C /* TableViewDatasource.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DBC4361A251F4F4900B7C82C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4361B251F4F5A00B7C82C /* Storyboarded.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBC43620251F4F6E00B7C82C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43621251F4F8300B7C82C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DBC43632251F505F00B7C82C /* VATechTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VATechTestUITests;
+			sourceTree = "<group>";
+		};
+		DBC43633251F505F00B7C82C /* VATechTestTests */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = VATechTestTests;
 			sourceTree = "<group>";
 		};
-		DBC4358B251F4A7900B7C82C /* VATechTestUITests */ = {
+		DBC43649251F571800B7C82C /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DBC4358C251F4A7900B7C82C /* VATechTestUITests.swift */,
-				DBC4358E251F4A7900B7C82C /* Info.plist */,
+				DBC4363A251F548100B7C82C /* HomeView.swift */,
 			);
-			path = VATechTestUITests;
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DBC4364A251F571D00B7C82C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4364B251F573900B7C82C /* HomeViewTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		DBC43653251F575A00B7C82C /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43654251F576B00B7C82C /* UITableView++Extentions.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		DBC43659251F57CF00B7C82C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBC4365A251F57DA00B7C82C /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBC43662251F59D800B7C82C /* BeerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43663251F59F100B7C82C /* BeerInfoViewController.swift */,
+			);
+			path = BeerInfo;
+			sourceTree = "<group>";
+		};
+		DBC43668251F59F900B7C82C /* BeerInfo */ = {
+			isa = PBXGroup;
+			children = (
+				DBC43669251F5AAD00B7C82C /* BeerInfoView.swift */,
+			);
+			path = BeerInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +284,9 @@
 			dependencies = (
 			);
 			name = VATechTest;
+			packageProductDependencies = (
+				DBC435BD251F4C8200B7C82C /* Alamofire */,
+			);
 			productName = VATechTest;
 			productReference = DBC43564251F4A7700B7C82C /* VATechTest.app */;
 			productType = "com.apple.product-type.application";
@@ -218,7 +358,10 @@
 				Base,
 			);
 			mainGroup = DBC4355B251F4A7700B7C82C;
-			productRefGroup = DBC43565251F4A7700B7C82C /* Products */;
+			packageReferences = (
+				DBC435BC251F4C8200B7C82C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = DBC4355B251F4A7700B7C82C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -261,10 +404,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC4356C251F4A7700B7C82C /* ViewController.swift in Sources */,
+				DBC43664251F59F100B7C82C /* BeerInfoViewController.swift in Sources */,
+				DBC43645251F559D00B7C82C /* SearchResults.swift in Sources */,
+				DBC4366A251F5AAD00B7C82C /* BeerInfoView.swift in Sources */,
+				DBC4363B251F548100B7C82C /* HomeView.swift in Sources */,
 				DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */,
+				DBC43640251F54E900B7C82C /* TableViewDatasource.swift in Sources */,
+				DBC43655251F576B00B7C82C /* UITableView++Extentions.swift in Sources */,
+				DBC435C9251F4CC700B7C82C /* Coordinator.swift in Sources */,
+				DBC4365B251F57DA00B7C82C /* Reusable.swift in Sources */,
+				DBC4364C251F573900B7C82C /* HomeViewTableViewCell.swift in Sources */,
 				DBC43572251F4A7700B7C82C /* VATechTest.xcdatamodeld in Sources */,
 				DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */,
+				DBC435D6251F4DC000B7C82C /* HomeViewController.swift in Sources */,
+				DBC435CF251F4D3100B7C82C /* HomeCoordinator.swift in Sources */,
+				DBC4361C251F4F5A00B7C82C /* Storyboarded.swift in Sources */,
+				DBC43622251F4F8300B7C82C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +427,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC43582251F4A7900B7C82C /* VATechTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +434,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC4358D251F4A7900B7C82C /* VATechTestUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,8 +591,10 @@
 		DBC43592251F4A7900B7C82C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_KEY = 1f689a1fe3ad74870b1ebf806136ee3d;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2392YT52CQ;
 				INFOPLIST_FILE = VATechTest/Info.plist;
@@ -457,8 +612,10 @@
 		DBC43593251F4A7900B7C82C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_KEY = 1f689a1fe3ad74870b1ebf806136ee3d;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2392YT52CQ;
 				INFOPLIST_FILE = VATechTest/Info.plist;
@@ -597,6 +754,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DBC435BC251F4C8200B7C82C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DBC435BD251F4C8200B7C82C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DBC435BC251F4C8200B7C82C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		DBC43570251F4A7700B7C82C /* VATechTest.xcdatamodeld */ = {

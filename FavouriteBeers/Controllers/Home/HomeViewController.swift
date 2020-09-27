@@ -12,6 +12,7 @@ protocol HomeViewControllerDelegate: class {
     func displayDataFor(_ beer: Beer)
     func saveBeer(_ beer: Beer)
     func toggleFavourtieBeers(_ toggle: Bool)
+    func isBeerFavourite(_ beer: Beer) -> Bool
 }
 
 final class HomeViewController: UIViewController {
@@ -37,6 +38,7 @@ final class HomeViewController: UIViewController {
         tableViewDatasource = TableViewDataSource(tableView: homeTableView, cellProvider: { tableView, indexPath, beer in
             let cell: HomeViewTableViewCell = tableView.dequeueCell(for: indexPath)
             cell.delegate = self
+            cell.favourited = self.delegate?.isBeerFavourite(beer) ?? false
             cell.configureWith(beer)
             return cell
         })

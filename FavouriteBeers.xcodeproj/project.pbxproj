@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DB72DBCE251F9B910043FDCA /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72DBCD251F9B910043FDCA /* UserDefaultsManager.swift */; };
 		DB72DBD3251F9BDA0043FDCA /* UserDefaults++Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB72DBD2251F9BDA0043FDCA /* UserDefaults++Extentions.swift */; };
-		DB94D063251F7E7F00B6FD2C /* BeerSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */; };
 		DBC43568251F4A7700B7C82C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43567251F4A7700B7C82C /* AppDelegate.swift */; };
 		DBC4356A251F4A7700B7C82C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC43569251F4A7700B7C82C /* SceneDelegate.swift */; };
 		DBC4356F251F4A7700B7C82C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBC4356D251F4A7700B7C82C /* Main.storyboard */; };
@@ -60,10 +59,9 @@
 /* Begin PBXFileReference section */
 		DB72DBCD251F9B910043FDCA /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		DB72DBD2251F9BDA0043FDCA /* UserDefaults++Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults++Extentions.swift"; sourceTree = "<group>"; };
-		DB94D05F251F781300B6FD2C /* VATechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VATechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB94D060251F781300B6FD2C /* VATechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestTests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestTests.xctest"; sourceTree = "<absolute>"; };
-		DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = VATechTestUITests.xctest; path = "/Users/tommurray/Code/Personal/other stuff/VATechTest/build/Debug-iphoneos/VATechTestUITests.xctest"; sourceTree = "<absolute>"; };
-		DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchResult.swift; sourceTree = "<group>"; };
+		DB82E7C42520C09500AE706D /* FavouriteBeersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavouriteBeersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB82E7C52520C09500AE706D /* FavouriteBeersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavouriteBeersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB94D05F251F781300B6FD2C /* FavouriteBeers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FavouriteBeers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC43567251F4A7700B7C82C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBC43569251F4A7700B7C82C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DBC4356E251F4A7700B7C82C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,14 +129,16 @@
 		DBC4355B251F4A7700B7C82C = {
 			isa = PBXGroup;
 			children = (
-				DBC43566251F4A7700B7C82C /* VATechTest */,
-				DBC43633251F505F00B7C82C /* VATechTestTests */,
-				DBC43632251F505F00B7C82C /* VATechTestUITests */,
-				DB94D05F251F781300B6FD2C /* VATechTest.app */,
+				DBC43566251F4A7700B7C82C /* FavouriteBeers */,
+				DBC43633251F505F00B7C82C /* FavouriteBeersTests */,
+				DBC43632251F505F00B7C82C /* FavouriteBeersUITests */,
+				DB94D05F251F781300B6FD2C /* FavouriteBeers.app */,
+				DB82E7C42520C09500AE706D /* FavouriteBeersTests.xctest */,
+				DB82E7C52520C09500AE706D /* FavouriteBeersUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
-		DBC43566251F4A7700B7C82C /* VATechTest */ = {
+		DBC43566251F4A7700B7C82C /* FavouriteBeers */ = {
 			isa = PBXGroup;
 			children = (
 				DBC4366E251F5D7B00B7C82C /* Managers */,
@@ -156,7 +156,7 @@
 				DBC43575251F4A7800B7C82C /* LaunchScreen.storyboard */,
 				DBC43578251F4A7800B7C82C /* Info.plist */,
 			);
-			path = VATechTest;
+			path = FavouriteBeers;
 			sourceTree = "<group>";
 		};
 		DBC435A4251F4ACD00B7C82C /* Controllers */ = {
@@ -172,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				DBC43644251F559D00B7C82C /* SearchResults.swift */,
-				DB94D062251F7E7F00B6FD2C /* BeerSearchResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,18 +228,18 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		DBC43632251F505F00B7C82C /* VATechTestUITests */ = {
+		DBC43632251F505F00B7C82C /* FavouriteBeersUITests */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = VATechTestUITests;
+			path = FavouriteBeersUITests;
 			sourceTree = "<group>";
 		};
-		DBC43633251F505F00B7C82C /* VATechTestTests */ = {
+		DBC43633251F505F00B7C82C /* FavouriteBeersTests */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = VATechTestTests;
+			path = FavouriteBeersTests;
 			sourceTree = "<group>";
 		};
 		DBC43649251F571800B7C82C /* Home */ = {
@@ -352,9 +351,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBC43563251F4A7700B7C82C /* VATechTest */ = {
+		DBC43563251F4A7700B7C82C /* FavouriteBeers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC43591251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTest" */;
+			buildConfigurationList = DBC43591251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeers" */;
 			buildPhases = (
 				DBC43560251F4A7700B7C82C /* Sources */,
 				DBC43561251F4A7700B7C82C /* Frameworks */,
@@ -364,18 +363,18 @@
 			);
 			dependencies = (
 			);
-			name = VATechTest;
+			name = FavouriteBeers;
 			packageProductDependencies = (
 				DBC435BD251F4C8200B7C82C /* Alamofire */,
 				DBEBE209251F8696001E0C81 /* Kingfisher */,
 			);
 			productName = VATechTest;
-			productReference = DB94D05F251F781300B6FD2C /* VATechTest.app */;
+			productReference = DB94D05F251F781300B6FD2C /* FavouriteBeers.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DBC4357C251F4A7900B7C82C /* VATechTestTests */ = {
+		DBC4357C251F4A7900B7C82C /* FavouriteBeersTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC43594251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTestTests" */;
+			buildConfigurationList = DBC43594251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeersTests" */;
 			buildPhases = (
 				DBC43579251F4A7900B7C82C /* Sources */,
 				DBC4357A251F4A7900B7C82C /* Frameworks */,
@@ -386,14 +385,14 @@
 			dependencies = (
 				DBC4357F251F4A7900B7C82C /* PBXTargetDependency */,
 			);
-			name = VATechTestTests;
+			name = FavouriteBeersTests;
 			productName = VATechTestTests;
-			productReference = DB94D060251F781300B6FD2C /* VATechTestTests.xctest */;
+			productReference = DB82E7C42520C09500AE706D /* FavouriteBeersTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DBC43587251F4A7900B7C82C /* VATechTestUITests */ = {
+		DBC43587251F4A7900B7C82C /* FavouriteBeersUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBC43597251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTestUITests" */;
+			buildConfigurationList = DBC43597251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeersUITests" */;
 			buildPhases = (
 				DBC43584251F4A7900B7C82C /* Sources */,
 				DBC43585251F4A7900B7C82C /* Frameworks */,
@@ -404,9 +403,9 @@
 			dependencies = (
 				DBC4358A251F4A7900B7C82C /* PBXTargetDependency */,
 			);
-			name = VATechTestUITests;
+			name = FavouriteBeersUITests;
 			productName = VATechTestUITests;
-			productReference = DB94D061251F781300B6FD2C /* VATechTestUITests.xctest */;
+			productReference = DB82E7C52520C09500AE706D /* FavouriteBeersUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -431,7 +430,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DBC4355F251F4A7700B7C82C /* Build configuration list for PBXProject "VATechTest" */;
+			buildConfigurationList = DBC4355F251F4A7700B7C82C /* Build configuration list for PBXProject "FavouriteBeers" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -448,9 +447,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBC43563251F4A7700B7C82C /* VATechTest */,
-				DBC4357C251F4A7900B7C82C /* VATechTestTests */,
-				DBC43587251F4A7900B7C82C /* VATechTestUITests */,
+				DBC43563251F4A7700B7C82C /* FavouriteBeers */,
+				DBC4357C251F4A7900B7C82C /* FavouriteBeersTests */,
+				DBC43587251F4A7900B7C82C /* FavouriteBeersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -511,7 +510,6 @@
 				DBC43682251F5EB400B7C82C /* AFError++Extentions.swift in Sources */,
 				DBC4367D251F5E4500B7C82C /* NetworkRequestorProtocol.swift in Sources */,
 				DBC4361C251F4F5A00B7C82C /* Storyboarded.swift in Sources */,
-				DB94D063251F7E7F00B6FD2C /* BeerSearchResult.swift in Sources */,
 				DBC43622251F4F8300B7C82C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,12 +533,12 @@
 /* Begin PBXTargetDependency section */
 		DBC4357F251F4A7900B7C82C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DBC43563251F4A7700B7C82C /* VATechTest */;
+			target = DBC43563251F4A7700B7C82C /* FavouriteBeers */;
 			targetProxy = DBC4357E251F4A7900B7C82C /* PBXContainerItemProxy */;
 		};
 		DBC4358A251F4A7900B7C82C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DBC43563251F4A7700B7C82C /* VATechTest */;
+			target = DBC43563251F4A7700B7C82C /* FavouriteBeers */;
 			targetProxy = DBC43589251F4A7900B7C82C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -694,12 +692,12 @@
 				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2392YT52CQ;
-				INFOPLIST_FILE = VATechTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FavouriteBeers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = scruffyhipster.VATechTest;
+				PRODUCT_BUNDLE_IDENTIFIER = scruffyhipster.FavouriteBeers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -715,12 +713,12 @@
 				BASE_URL = "https://sandbox-api.brewerydb.com/v2/";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2392YT52CQ;
-				INFOPLIST_FILE = VATechTest/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/FavouriteBeers/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = scruffyhipster.VATechTest;
+				PRODUCT_BUNDLE_IDENTIFIER = scruffyhipster.FavouriteBeers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -745,7 +743,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VATechTest.app/VATechTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FavouriteBeers.app/FavouriteBeers";
 			};
 			name = Debug;
 		};
@@ -767,7 +765,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VATechTest.app/VATechTest";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FavouriteBeers.app/FavouriteBeers";
 			};
 			name = Release;
 		};
@@ -814,7 +812,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBC4355F251F4A7700B7C82C /* Build configuration list for PBXProject "VATechTest" */ = {
+		DBC4355F251F4A7700B7C82C /* Build configuration list for PBXProject "FavouriteBeers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC4358F251F4A7900B7C82C /* Debug */,
@@ -823,7 +821,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC43591251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTest" */ = {
+		DBC43591251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC43592251F4A7900B7C82C /* Debug */,
@@ -832,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC43594251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTestTests" */ = {
+		DBC43594251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeersTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC43595251F4A7900B7C82C /* Debug */,
@@ -841,7 +839,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DBC43597251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "VATechTestUITests" */ = {
+		DBC43597251F4A7900B7C82C /* Build configuration list for PBXNativeTarget "FavouriteBeersUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DBC43598251F4A7900B7C82C /* Debug */,

@@ -25,21 +25,26 @@ final class HomeViewTableViewCell: UITableViewCell {
 
     // MARK: - Properties
     weak var delegate: TableViewCellDelegate?
+    var favourited: Bool = false
     private var beer: Beer?
-    private var favourited: Bool = false
 
     // MARK: - Methods
 
     func configureWith(_ data: Beer) {
         beer = data
         title.text = data.name
+        updateButtonImage()
     }
 
     private func toggleFavouriteIcon() {
         favourited = !favourited
         print(favourited)
-        favourtieButton.setImage(UIImage(systemName: favourited ? "heart.fill" : "heart"), for: .normal)
+        updateButtonImage()
         delegate?.didFavourtieBeer(beer ?? nil)
+    }
+
+    private func updateButtonImage() {
+        favourtieButton.setImage(UIImage(systemName: favourited ? "heart.fill" : "heart"), for: .normal)
     }
 
 }

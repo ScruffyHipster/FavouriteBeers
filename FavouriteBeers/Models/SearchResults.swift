@@ -17,6 +17,7 @@ struct SearchResults: Codable, Hashable {
 
 // MARK: - Datum
 struct Beer: Codable, Hashable {
+    let uuid: UUID = UUID()
     let id, name, nameDisplay: String
     let abv: String?
     let glasswareID, styleID: Int?

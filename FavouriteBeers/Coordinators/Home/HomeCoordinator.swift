@@ -37,8 +37,8 @@ final class HomeCoordinator: Coordinator {
     // MARK: - Methods
     func start() {
         setUpHandlers()
-        initHomeController()
         configureUserDefaults()
+        initHomeController()
     }
 
     private func initHomeController() {
@@ -85,6 +85,11 @@ final class HomeCoordinator: Coordinator {
 
 // MARK: - HomeViewController Delegate
 extension HomeCoordinator: HomeViewControllerDelegate {
+
+    func isBeerFavourite(_ beer: Beer) -> Bool {
+        print(favourtieBeers.count)
+        return favourtieBeers.contains(beer)
+    }
 
     func toggleFavourtieBeers(_ toggle: Bool) {
         if toggle {
